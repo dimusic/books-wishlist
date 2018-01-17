@@ -1,3 +1,5 @@
+[Demo available here](https://dimusic.github.io/books-wishlist/)
+
 **Installation**
 
 To setup dependencies run `npm install`

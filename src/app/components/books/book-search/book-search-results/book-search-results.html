@@ -1,0 +1,10 @@
+<div class="book-search-results">
+    <div class="book-search-results-book-container"
+        ng-repeat="book in $ctrl.books track by book.id">
+        
+        <book book="book"
+            is-preview="true"
+            is-saved="$ctrl.isBookSaved(book)"
+            on-save="$ctrl.onBookSave($locals)"></book>
+    </div>
+</div>

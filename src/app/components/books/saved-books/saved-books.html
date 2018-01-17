@@ -1,0 +1,16 @@
+<div class="saved-books">
+    <h2>My books</h2>
+
+    <div ng-if="$ctrl.books.length === 0">
+        Your books wishlist is empty.
+    </div>
+    
+    <div class="saved-book-container"
+        ng-repeat="book in $ctrl.books track by book.id">
+        
+        <book is-preview="false"
+            book="book"
+            is-saved="true"
+            on-remove="$ctrl.onBookRemove($locals)"></book>
+    </div>
+</div>

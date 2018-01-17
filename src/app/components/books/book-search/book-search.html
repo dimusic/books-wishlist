@@ -1,0 +1,20 @@
+<div class="book-search">
+    <book-search-input query="$ctrl.searchQuery"
+        on-query-change="$ctrl.searchBooks($event)"></book-search-input>
+    
+    <div>
+        <div ng-if="$ctrl.isLoading">
+            Loading...
+        </div>
+        
+        <div ng-if="$ctrl.searchErrored">
+            Something went wrong, please try again in a few minutes
+        </div>
+
+        <div ng-if="!$ctrl.searchErrored && !ctrl.isLoading">
+            <book-search-results books="$ctrl.books"
+                saved-books="$ctrl.savedBooks"
+                on-book-save="$ctrl.onBookSave($locals)"></book-search-results>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "targets": {
+                "browsers": ["IE >= 8"]
+            },
+            "modules": false
+        }]
+    ],
+    "plugins": [
+        "angularjs-annotate"
+    ]
+}

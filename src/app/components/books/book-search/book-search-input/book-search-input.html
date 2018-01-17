@@ -1,0 +1,5 @@
+<input type="text" class="book-search-input"
+    placeholder="Find a book"
+    ng-model="$ctrl.query"
+    ng-model-options="{debounce: 150}"
+    ng-change="$ctrl.onChange()" />

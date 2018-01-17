@@ -1,0 +1,40 @@
+<div class="book" ng-class="{'book-preview': $ctrl.isPreview}">
+    <div class="book-image-container">
+        <img ng-src="{{$ctrl.getBookImage()}}"
+            alt="{{$ctrl.book.volumeInfo.title}}" />
+    </div>
+    <div class="book-details">
+        <div class="book-details-title"
+            title="{{$ctrl.book.volumeInfo.title}}">{{$ctrl.getTitle()}}</div>
+        <div class="book-details-author"
+            ng-if="$ctrl.book.volumeInfo.authors">
+            by {{$ctrl.book.volumeInfo.authors[0]}}
+        </div>
+        
+        <div class="book-details-description" ng-if="!$ctrl.isPreview">
+            {{$ctrl.book.volumeInfo.description}}
+        </div>
+
+        <div class="book-details-footer">
+            <div class="book-details-pages" ng-if="!$ctrl.isPreview && $ctrl.book.volumeInfo.pageCount">
+                {{$ctrl.book.volumeInfo.pageCount}} pages
+            </div>
+            
+            <div class="book-details-actions">
+                <span class="book-saved"
+                    ng-if="$ctrl.isPreview && $ctrl.isSaved">Saved</span>
+
+                <a href="#"
+                    class="book-add-btn"
+                    ng-if="!$ctrl.isSaved"
+                    ng-click="$ctrl.addBook($event)">Add</a>
+                
+                <a href="#"
+                    class="book-remove-btn"
+                    ng-if="!$ctrl.isPreview"
+                    ng-click="$ctrl.removeBook($event)">Remove</a>
+            </div>
+        </div>
+
+    </div>
+</div>

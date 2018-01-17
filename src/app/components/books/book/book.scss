@@ -1,0 +1,77 @@
+.book{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    .book-image-container{
+        flex: 0 0 200px;
+        margin-right: 25px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .book-details{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .book-details-title{
+        color: #222;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .book-details-author{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .book-details-description{
+        margin-bottom: 20px;
+    }
+
+    .book-details-footer{
+        margin: auto 0 0;
+        display: flex;
+        justify-content: space-between;
+        
+        .book-details-pages{
+            flex: 3 0;
+            font-style: italic;
+        }
+
+        .book-details-actions{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .book-saved{
+        color: #999;
+    }
+
+    &.book-preview{
+        padding: 0;
+        margin: 0;
+
+        .book-details-title{
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .book-details-author{
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .book-image-container{
+            flex: 0 0 80px;
+            margin-right: 10px;
+        }
+    }
+}

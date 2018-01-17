@@ -1,0 +1,14 @@
+.book-search-results{
+    .book-search-results-book-container{
+        display: block;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #d5d5d5;
+
+        &:last-of-type{
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<div class="app-container">
+    <div class="book-search-container">
+        <book-search on-book-save="$ctrl.saveBook($event)"
+            saved-books="$ctrl.savedBooks"></book-search>
+    </div>
+
+    <div class="saved-books-container">
+        <saved-books books="$ctrl.savedBooks"
+            on-book-remove="$ctrl.removeBook($event)"></saved-books>
+    </div>
+</div>
